@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Benedict Okhihan | Data Analyst Portfolio</title>
+<meta name="description" content="Professional portfolio of Benedict Okhihan — Data Analytics, Business Intelligence and Data Science.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+--navy:#122f59;--blue:#1769d5;--blue2:#2e82ed;--ink:#17243a;--muted:#627087;
+--line:#d8e5f1;--bg:#f7fbff;--white:#fff;--green:#128264;--purple:#51374f;
+--shadow:0 18px 48px rgba(20,55,105,.11)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);font-family:"DM Sans",Arial,sans-serif;color:var(--ink);line-height:1.6}
+a{text-decoration:none;color:inherit}
+.container{width:min(1220px,92%);margin:auto}
+nav{height:76px;position:sticky;top:0;z-index:100;background:rgba(248,251,255,.94);backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}
+.nav-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand strong{font-family:Manrope;font-size:20px;display:block;letter-spacing:-.4px;color:var(--navy)}
+.brand small{font-size:11px;color:#66758a}
+.nav-links{display:flex;align-items:center;gap:22px;font-size:13px;font-weight:700;color:#55647a}
+.nav-links a:hover{color:var(--blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 19px;border-radius:9px;font-size:13px;font-weight:800;border:1px solid transparent;transition:.2s ease;cursor:pointer}
+.btn:hover{transform:translateY(-2px)}
+.primary{color:#fff;background:linear-gradient(135deg,#155fc2,#2c7fe8);box-shadow:0 10px 22px rgba(23,105,213,.22)}
+.outline{background:#fff;color:var(--blue);border-color:var(--blue)}
+.hero{padding:66px 0 55px;background:radial-gradient(circle at 73% 26%,#d7ecff 0,rgba(215,236,255,.42) 22%,transparent 46%),linear-gradient(180deg,#fbfdff,#edf6ff)}
+.hero-grid{display:grid;grid-template-columns:1.15fr .76fr .38fr;gap:34px;align-items:center}
+.eyebrow{font-size:11px;letter-spacing:1.5px;font-weight:800;color:#4d6c95}
+h1,h2,h3{font-family:Manrope}
+.hero h1{font-size:clamp(49px,6vw,78px);line-height:1;letter-spacing:-3px;color:var(--navy);margin:8px 0}
+.blue{color:var(--blue)}
+.role{font-family:Manrope;font-size:18px;font-weight:700;color:#2b405f;margin-bottom:10px}
+.hero p{font-size:15px;color:#586981;max-width:650px;margin:0}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:23px}
+.profile{width:min(355px,88vw);aspect-ratio:1/1.06;object-fit:cover;object-position:center;border-radius:21px;border:8px solid rgba(255,255,255,.86);box-shadow:var(--shadow)}
+.side-quote{font-family:Manrope;font-size:27px;font-weight:700;line-height:1.12;color:#33445f}
+.side-line{width:65px;height:3px;background:var(--blue);border-radius:5px;margin:18px 0}
+.side-list{list-style:none;padding:0;margin:0}
+.side-list li{margin:13px 0;font-size:14px;font-weight:700;color:#46566e}
+.side-list span{color:var(--blue);margin-right:8px}
+.stats{display:flex;gap:23px;margin-top:25px}
+.stat{display:flex;gap:9px;align-items:center}
+.stat-icon{color:var(--blue);font-size:21px}
+.stat b{display:block;font-family:Manrope;font-size:18px;line-height:1}
+.stat small{font-size:10px;color:#6c7b8f}
+section{padding:76px 0}
+.section-title{margin-bottom:28px}
+.section-title h2{font-size:clamp(32px,4vw,46px);line-height:1.1;letter-spacing:-1.4px;color:var(--navy);margin:6px 0}
+.lead{margin:0;color:var(--muted);max-width:800px}
+.about{padding:55px 0}
+.projects{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.project-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px;box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden}
+.project-card.salient{background:linear-gradient(145deg,#fff,#f1fbf6)}
+.project-card.aurora{background:linear-gradient(145deg,#fff,#faf7fb)}
+.badge{display:inline-block;width:max-content;padding:6px 10px;border-radius:20px;background:#e7f1ff;color:#2467c9;font-size:10px;font-weight:800;margin-bottom:10px}
+.badge.green{background:#e4f7ee;color:#17775e}.badge.purple{background:#f0e9f1;color:#644264}
+.project-card h3{font-size:25px;line-height:1.1;color:#1a345b;margin:4px 0}
+.tools{font-size:11px;font-weight:800;color:#3b6eb2}
+.green-text{color:#197b61}.purple-text{color:#694767}
+.project-card p{font-size:13px;color:#5c6d83;margin:11px 0 14px}
+.project-preview{height:205px;border-radius:12px;overflow:hidden;border:1px solid #d8e4ef;background:#eef3f8;margin:4px 0 14px;box-shadow:0 8px 18px rgba(20,55,105,.08)}
+.project-preview img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+.project-preview.salient-img img{object-position:center}
+.nexus-preview{background:linear-gradient(135deg,#17253b,#253a5a);padding:16px;color:#dce8f8;font:10px/1.55 Consolas,monospace}
+.nexus-preview .mini-title{font-family:"DM Sans";font-size:10px;font-weight:800;color:#a9c8ff;margin-bottom:8px}
+.checks{list-style:none;padding:0;margin:0 0 15px}
+.checks li{font-size:12px;color:#52637a;margin:7px 0}
+.checks li:before{content:"✓";display:inline-grid;place-items:center;width:17px;height:17px;border-radius:50%;background:#216dd5;color:#fff;font-size:10px;margin-right:7px}
+.salient .checks li:before{background:var(--green)}.aurora .checks li:before{background:#674667}
+.project-card .actions{margin-top:auto}
+.project-card .btn{width:100%}
+.detail{background:#f8fbff}
+.detail-shell{background:#fff;border:1px solid var(--line);border-radius:22px;box-shadow:var(--shadow);overflow:hidden}
+.detail-head{padding:34px 42px 22px;background:linear-gradient(135deg,#f3f8ff,#fff)}
+.detail-head.salient-head{background:linear-gradient(135deg,#effbf6,#fff)}
+.detail-head.aurora-head{background:linear-gradient(135deg,#faf6fb,#fff)}
+.detail-head h2{font-size:38px;line-height:1.1;color:var(--navy);margin:8px 0}
+.detail-content{padding:34px 42px}
+.detail-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:32px;align-items:center}
+.detail-content h3{font-size:21px;color:#29466d;margin:0 0 8px}
+.detail-content p{color:#586981;font-size:14px}
+.insight{padding:15px;border-radius:12px;background:#f0f6fd;border-left:4px solid var(--blue);font-size:13px;color:#51627a;margin:16px 0}
+.green-insight{background:#effaf5;border-left-color:var(--green)}
+.purple-insight{background:#f8f1f8;border-left-color:#694767}
+.full-shot{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#eef2f6;box-shadow:0 14px 30px rgba(20,45,75,.10)}
+.full-shot img{width:100%;display:block;max-height:560px;object-fit:contain;background:#fff}
+.full-shot.aurora-shot img{object-fit:contain;max-height:none}
+.detail-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.process{background:linear-gradient(180deg,#f7fbff,#edf6ff)}
+.steps{display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-top:28px}
+.step{text-align:center;position:relative}
+.step:not(:last-child):after{content:"→";position:absolute;right:-11px;top:24px;color:var(--blue);font-size:20px}
+.circle{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;margin:auto;background:#eaf4ff;border:1px solid #cfe1f8;color:var(--blue);font-family:Manrope;font-weight:800}
+.step b{display:block;font-size:12px;margin-top:8px}.step small{display:block;font-size:10px;color:#718096}
+.skills{background:#fff}
+.skill-list{display:flex;flex-wrap:wrap;gap:10px}
+.skill{padding:10px 14px;border:1px solid var(--line);background:#f9fcff;border-radius:8px;font-size:13px;font-weight:800;color:#475873}
+.contact{background:linear-gradient(135deg,#e5f2ff,#d9eaff);padding:50px 0}
+.contact-box{display:flex;justify-content:space-between;align-items:center;gap:25px}
+.contact h2{font-size:32px;color:var(--navy);margin:0}.contact p{margin:5px 0;color:#596a82;font-size:14px}
+footer{text-align:center;padding:24px;color:#6d7c8f;font-size:12px}
+@media(max-width:1080px){.project-grid{grid-template-columns:1fr 1fr}.hero-grid{grid-template-columns:1fr .8fr}.hero-side{display:none}.detail-grid{grid-template-columns:1fr}}
+@media(max-width:720px){nav{height:70px}.nav-links{display:none}.nav-inner>.btn{padding:10px 12px;font-size:11px}.hero{padding-top:42px}.hero-grid{grid-template-columns:1fr}.photo-wrap{order:-1;text-align:center}.hero h1{font-size:52px}.stats{gap:14px}.project-grid{grid-template-columns:1fr}.detail-head,.detail-content{padding:25px 20px}.detail-head h2{font-size:31px}.steps{grid-template-columns:repeat(2,1fr);gap:20px}.step:not(:last-child):after{display:none}.contact-box{display:block}.contact .actions{margin-top:16px}.project-preview{height:240px}}
+</style>
+</head>
+<body>
+<nav>
+<div class="container nav-inner">
+<a class="brand" href="#home"><strong>Benedict Okhihan</strong><small>Data Analyst | Business Intelligence | Data Science</small></a>
+<div class="nav-links"><a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#process">Approach</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div>
+<a class="btn primary" href="#contact">✉ Get in Touch</a>
+</div>
+</nav>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div>
+<div class="eyebrow">TURNING DATA INTO OPPORTUNITIES</div>
+<h1>Hi, I’m<br><span class="blue">Benedict Okhihan</span></h1>
+<div class="role">Data Analyst | Business Intelligence | Data Science</div>
+<p>I use data to uncover insights, solve real business problems and support better decision-making. I am passionate about transforming complex data into clear, actionable insights.</p>
+<div class="actions">
+<a class="btn primary" href="#projects">▥ View My Projects</a>
+<a class="btn outline" href="https://www.linkedin.com/in/benedictokhihan/" target="_blank" rel="noopener">in Connect on LinkedIn</a>
+</div>
+<div class="stats">
+<div class="stat"><span class="stat-icon">▥</span><div><b>2+</b><small>Years Experience</small></div></div>
+<div class="stat"><span class="stat-icon">◉</span><div><b>3</b><small>Featured Projects</small></div></div>
+<div class="stat"><span class="stat-icon">✦</span><div><b>100%</b><small>Focused on Impact</small></div></div>
+</div>
+</div>
+<div class="photo-wrap"><img class="profile" src="assets/benedict-profile.png" alt="Professional portrait of Benedict Okhihan"></div>
+<aside class="hero-side"><div class="side-quote">“Better<br>Data.<br>Brighter<br>Decisions.”</div><div class="side-line"></div><ul class="side-list"><li><span>▥</span>Analyse</li><li><span>✦</span>Solve</li><li><span>↗</span>Create Impact</li></ul></aside>
+</div>
+</section>
+
+<section class="about" id="about">
+<div class="container">
+<div class="section-title">
+<div class="eyebrow">ABOUT ME</div>
+<h2>Real problems. <span class="blue">Useful insights.</span></h2>
+<p class="lead">I work in data analytics and business intelligence, with experience across reporting, customer and product analytics, dashboard development and applied machine learning. My approach starts with the business problem and the data—not the tool.</p>
+</div>
+</div>
+</section>
+
+<section class="projects" id="projects">
+<div class="container">
+<div class="section-title">
+<div class="eyebrow">FEATURED PROJECTS</div>
+<h2>Real Projects. <span class="blue">Real Impact.</span></h2>
+<p class="lead">Three featured projects demonstrating my skills in SQL, Excel, Power BI and business intelligence.</p>
+</div>
+
+<div class="project-grid">
+<article class="project-card">
+<span class="badge">★ FEATURED PROJECT</span>
+<h3>Nexus Retail Project</h3>
+<div class="tools">SQL | PostgreSQL | Retail Analytics</div>
+<p>Retail analysis focused on sales performance, promotions, inventory risk, seasonality and product movement.</p>
+<div class="project-preview nexus-preview">
+<div class="mini-title">SAMPLE SQL ANALYSIS</div>
+SELECT p.promotions,<br>
+&nbsp;&nbsp;COUNT(s.salesid) AS sales_volume<br>
+FROM sales s<br>
+JOIN product p ON s.productid = p.productid<br>
+GROUP BY p.promotions<br>
+ORDER BY sales_volume DESC;
+</div>
+<ul class="checks"><li>Promotional performance</li><li>Inventory analysis</li><li>Seasonality and deadstock</li></ul>
+<div class="actions"><a class="btn primary" href="#nexus">View Nexus Retail Project →</a></div>
+</article>
+
+<article class="project-card salient">
+<span class="badge green">★ FEATURED PROJECT</span>
+<h3>Salient Project</h3>
+<div class="tools green-text">Excel | Data Analysis | Dashboard</div>
+<p>Excel capstone project using sales and profitability analysis, with insights presented through an interactive dashboard.</p>
+<div class="project-preview salient-img"><img src="assets/salient-dashboard-full.jpg" alt="Salient Excel dashboard preview"></div>
+<ul class="checks"><li>Revenue and profit trends</li><li>Category profitability</li><li>Top product performance</li></ul>
+<div class="actions"><a class="btn" style="background:linear-gradient(135deg,#10775c,#1b9b73);color:#fff" href="#salient">View Salient Project →</a></div>
+</article>
+
+<article class="project-card aurora">
+<span class="badge purple">★ POWER BI PROJECT</span>
+<h3>Aurora Threads</h3>
+<div class="tools purple-text">Power BI | Dashboard | Sales Analytics</div>
+<p>Power BI sales dashboard analysing revenue, quantity sold, customers, stores, product categories, products and payment types.</p>
+<div class="project-preview"><img src="assets/aurora-threads-dashboard.jpg" alt="Aurora Threads Power BI dashboard"></div>
+<ul class="checks"><li>Revenue by gender and category</li><li>Revenue by product and day</li><li>Payment and customer analysis</li></ul>
+<div class="actions"><a class="btn" style="background:linear-gradient(135deg,#51374f,#79536e);color:#fff" href="#aurora">View Aurora Threads Project →</a></div>
+</article>
+</div>
+</div>
+</section>
+
+<section class="detail" id="nexus">
+<div class="container">
+<div class="detail-shell">
+<div class="detail-head">
+<div class="eyebrow">SQL CASE STUDY</div>
+<h2>Nexus Retail Project</h2>
+<p class="lead">Using PostgreSQL to investigate retail performance and answer business-focused questions.</p>
+</div>
+<div class="detail-content detail-grid">
+<div>
+<h3>Project focus</h3>
+<p>The analysis investigated the factors behind sales performance and operational risk. SQL queries were used to explore promotions, inventory, economic indicators, seasonality and product movement.</p>
+<div class="insight"><strong>Business objective:</strong> identify patterns that can support better inventory decisions, promotional planning and product performance management.</div>
+<ul class="checks"><li>SQL joins and aggregations</li><li>Percentile-based analysis</li><li>Product and inventory performance</li><li>Business recommendations</li></ul>
+</div>
+<div class="full-shot" style="background:#16243a;padding:26px;color:#dce8fa;font:13px/1.7 Consolas,monospace">
+<div style="font-family:DM Sans;font-weight:800;color:#a9c8ff;margin-bottom:10px">RETAIL PERFORMANCE QUERY</div>
+SELECT<br>
+&nbsp;&nbsp;product_name,<br>
+&nbsp;&nbsp;SUM(quantity * price) AS revenue<br>
+FROM sales<br>
+GROUP BY product_name<br>
+ORDER BY revenue DESC;
+</div>
+</div>
+<div class="detail-actions"><a class="btn primary" href="#projects">← Back to Projects</a></div>
+</div>
+</div>
+</section>
+
+<section class="detail" id="salient">
+<div class="container">
+<div class="detail-shell">
+<div class="detail-head salient-head">
+<div class="eyebrow" style="color:#287a63">EXCEL CAPSTONE PROJECT</div>
+<h2>Salient Project</h2>
+<p class="lead">A single, full dashboard screenshot from the Salient workbook — displayed as one complete project visual rather than split into separate views.</p>
+</div>
+<div class="detail-content detail-grid">
+<div>
+<h3>Project overview</h3>
+<p>The Salient project uses Excel analysis and dashboard reporting to present key performance patterns across revenue, profit, categories, products and customer-related insights.</p>
+<div class="insight green-insight"><strong>Dashboard purpose:</strong> turn the analysis into a clear visual summary that supports faster and more informed business decisions.</div>
+<ul class="checks"><li>Revenue and profit analysis</li><li>Category profitability</li><li>Top product performance</li><li>Customer and demographic insights</li></ul>
+<div class="detail-actions"><a class="btn" style="background:linear-gradient(135deg,#10775c,#1b9b73);color:#fff" href="#projects">← Back to Projects</a></div>
+</div>
+<div class="full-shot">
+<img src="assets/salient-dashboard-full.jpg" alt="Full Salient Excel dashboard screenshot">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="detail" id="aurora">
+<div class="container">
+<div class="detail-shell">
+<div class="detail-head aurora-head">
+<div class="eyebrow" style="color:#694767">POWER BI DASHBOARD PROJECT</div>
+<h2>Aurora Threads</h2>
+<p class="lead">A Power BI dashboard bringing together sales, customer, store, product and payment insights in one executive view.</p>
+</div>
+<div class="detail-content detail-grid">
+<div>
+<h3>Project overview</h3>
+<p>The Aurora Threads dashboard provides a consolidated view of key commercial metrics, including total quantity sold, total revenue, number of stores and total customers.</p>
+<div class="insight purple-insight"><strong>Dashboard focus:</strong> revenue analysis across gender, product category, products, payment types and daily trends.</div>
+<ul class="checks"><li>Total revenue and quantity sold KPIs</li><li>Revenue by gender and product category</li><li>Revenue by product and payment type</li><li>Daily revenue trend and customer-level detail</li></ul>
+<div class="detail-actions"><a class="btn" style="background:linear-gradient(135deg,#51374f,#79536e);color:#fff" href="#projects">← Back to Projects</a></div>
+</div>
+<div class="full-shot aurora-shot">
+<img src="assets/aurora-threads-dashboard.jpg" alt="Aurora Threads Power BI dashboard screenshot">
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="process" id="process">
+<div class="container">
+<div class="section-title"><div class="eyebrow">MY APPROACH</div><h2>From Data to <span class="blue">Decisions</span></h2><p class="lead">A structured approach to solving business problems with data.</p></div>
+<div class="steps">
+<div class="step"><div class="circle">01</div><b>Business</b><small>Problem</small></div>
+<div class="step"><div class="circle">02</div><b>Understand</b><small>the Data</small></div>
+<div class="step"><div class="circle">03</div><b>Clean</b><small>& Prepare</small></div>
+<div class="step"><div class="circle">04</div><b>Analyse</b><small>Patterns</small></div>
+<div class="step"><div class="circle">05</div><b>Visualise</b><small>Insights</small></div>
+<div class="step"><div class="circle">06</div><b>Interpret</b><small>Results</small></div>
+<div class="step"><div class="circle">07</div><b>Recommend</b><small>Action</small></div>
+</div>
+</div>
+</section>
+
+<section class="skills" id="skills">
+<div class="container">
+<div class="section-title"><div class="eyebrow">SKILLS & TOOLS</div><h2>Tools are useful. <span class="blue">Problems come first.</span></h2></div>
+<div class="skill-list"><span class="skill">SQL</span><span class="skill">PostgreSQL</span><span class="skill">Excel</span><span class="skill">Power BI</span><span class="skill">Tableau</span><span class="skill">Python</span><span class="skill">ETL</span><span class="skill">Data Visualisation</span><span class="skill">Business Intelligence</span><span class="skill">Dashboard Development</span><span class="skill">Predictive Analytics</span><span class="skill">Machine Learning</span></div>
+</div>
+</section>
+
+<section class="contact" id="contact">
+<div class="container contact-box">
+<div><h2>Let’s Work Together</h2><p>I’m always open to discussing new opportunities, interesting projects or ways to turn data into meaningful impact.</p></div>
+<div class="actions"><a class="btn primary" href="mailto:okhihanben@gmail.com">✉ Get in Touch</a><a class="btn outline" href="https://www.linkedin.com/in/benedictokhihan/" target="_blank" rel="noopener">in Connect on LinkedIn</a></div>
+</div>
+</section>
+</main>
+
+<footer>© 2026 Benedict Okhihan • Data Analytics & Business Intelligence</footer>
+</body>
+</html>
